@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct neo_polis_widgetApp: App {
+    @EnvironmentObject var polises : PolisViewModel
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            ContentView(widgetType: 0)
+        }.environmentObject(polises)
     }
 }
